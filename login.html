@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Registration Form</title>
+    <style>
+		.login{
+			padding: 5%;
+			 
+		}
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+			background-image: url("https://images.unsplash.com/photo-1541320729316-d1b75cf6e2e6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=700&ixid=MnwxfDB8MXxyYW5kb218MHx8c2VhLG5hdHVyZXx8fHx8fDE3MDgwMjY4MzI&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1550");
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 100%;
+        }
+        form {
+           width:100%;
+			border: 2px solid #00000041;
+			padding: 10%;
+			  background-color: #ffffffa1;
+			  border-radius: 20px;
+			  padding-top: 2%;
+        }
+        label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .or-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+            font-size: 0.8rem;
+        }
+        .or-container div {
+            width: 1px;
+            height: 1rem;
+            background-color: #ccc;
+            margin: 0 0.5rem;
+        }
+        .or-container span {
+            padding: 0 0.5rem;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+		 
+		 .cross{
+			text-align: end;
+		 }
+    </style>
+</head>
+<body>
+	
+	<div class="login">
+		
+    <form action="register.php" method="post">
+		<p class="cross"><a href="index.html"><i class="fa-solid fa-xmark fa-fade fa-xl" style="color: #04040b;"></i></a></p>
+        <label for="name">Full name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Create your account" onclick="showAlert()">
+
+        <div class="or-container">
+            <div></div>
+            <span>or</span>
+            <div></div>
+        </div>
+
+        <div class="google" style="text-align: center;">
+            <span ><i class="fa-brands fa-google"></i> <a href="index.html" onclick="showAlert2()">Sign with Google</a> </span>
+        </div>
+
+        <p>
+            By signing up, you agree to our communications and usage terms.
+        </p>
+
+        <a href="index.html" onclick="showAlert2()">Already have an account? Sign in</a>
+    </form>
+</div>
+<script>
+	function showAlert() {
+	  alert("Your form Is Submitted Successfully");
+	}
+	function showAlert2() {
+	  alert("Sign In Successfully  Redirecting to main Page");
+	}
+	</script>
+</body>
+</html>
